@@ -17,7 +17,6 @@ body {
 .container {
     width: 100%;
     max-width: 600px;
-    /* Restrict the max width for large screens */
     text-align: center;
     margin-top: 2rem;
 }
@@ -31,20 +30,18 @@ body {
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    /* Allow items to wrap on smaller screens */
     gap: 10px;
     justify-content: center;
 }
 
 .taskInput {
+    background-color: #f4f4f4;
     border-top: none;
     border-left: none;
     border-right: none;
     padding: 7px;
     width: 100%;
-    /* Make the input take full width on mobile */
     max-width: 300px;
-    /* Limit the width on larger screens */
     font-size: 1rem;
 }
 
@@ -54,9 +51,7 @@ input:focus {
 
 .addBtn {
     width: 100%;
-    /* Make the button take full width on mobile */
     max-width: 120px;
-    /* Limit the width on larger screens */
     padding: 7px;
     background-color: rgb(81, 155, 109);
     color: white;
@@ -93,7 +88,6 @@ li {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    /* Adjust width for mobile screens */
     max-width: 400px;
     color: white;
 }
