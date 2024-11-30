@@ -10,11 +10,14 @@ body {
     justify-content: center;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: f4f4f4;
+    background-color: #f4f4f4;
+    padding: 10px;
 }
 
 .container {
-    width: 70%;
+    width: 100%;
+    max-width: 600px;
+    /* Restrict the max width for large screens */
     text-align: center;
     margin-top: 2rem;
 }
@@ -27,6 +30,8 @@ body {
     margin-top: 1rem;
     padding: 10px;
     display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap on smaller screens */
     gap: 10px;
     justify-content: center;
 }
@@ -36,7 +41,10 @@ body {
     border-left: none;
     border-right: none;
     padding: 7px;
-    width: 30%;
+    width: 100%;
+    /* Make the input take full width on mobile */
+    max-width: 300px;
+    /* Limit the width on larger screens */
     font-size: 1rem;
 }
 
@@ -45,7 +53,10 @@ input:focus {
 }
 
 .addBtn {
-    width: 80px;
+    width: 100%;
+    /* Make the button take full width on mobile */
+    max-width: 120px;
+    /* Limit the width on larger screens */
     padding: 7px;
     background-color: rgb(81, 155, 109);
     color: white;
@@ -56,7 +67,7 @@ input:focus {
     font-size: 1rem;
 }
 
-.addBtn:hover{
+.addBtn:hover {
     background-color: rgb(53, 107, 74);
 }
 
@@ -81,7 +92,8 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 90%;
+    /* Adjust width for mobile screens */
     max-width: 400px;
     color: white;
 }
@@ -97,4 +109,19 @@ li button {
 
 li button:hover {
     background-color: rgb(192, 57, 43);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .taskInput,
+    .addBtn {
+        width: 100%;
+    }
+
+    li {
+        width: 100%;
+    }
 }
